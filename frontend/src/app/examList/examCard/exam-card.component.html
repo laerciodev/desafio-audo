@@ -1,0 +1,29 @@
+<div
+  [className]="isCollapsed ? 'card' : 'card active'">
+  <div
+  [className]="isCollapsed ? 'card-header' : 'card-header active'"
+  aria-controls="card-body"
+  [attr.aria-expanded]="!isCollapsed"
+  (click)="isCollapsed = !isCollapsed">
+    <div class="exam-info-container">
+      <time class="exam-date">{{ date }}</time>
+      <span class="doctor-name">{{ doctor }}</span>
+      <svg-icon
+        applyCss="true"
+        [svgStyle]="{'width.px': 15}"
+        [ngClass]="{
+          'arrow': isCollapsed,
+          'arrow-up': !isCollapsed
+        }"
+        src="assets/down-arrow.svg">
+      </svg-icon>
+    </div>
+    <div class="exam-name">{{ name }}</div>
+  </div>
+  <div
+    [ngbCollapse]="isCollapsed"
+    class="card-body">
+    <a target="_blank" class="btn-audo -laudo">Ver laudo</a>
+    <a class="btn-audo -imagens">Baixar imagens</a>
+  </div>
+</div>

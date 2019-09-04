@@ -1,0 +1,23 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #f4f6f8!important;
+}
+
+.btn-audo {
+  margin-top: 30px;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  font-weight: 600;
+  background-color: #6a96d9;
+  color: #fff;
+  box-shadow: 0 0 12px 0 rgba(213, 221, 230, 0.4);
+  border: 1px solid #76a6ef;
+  border-radius: 25px;
+  cursor: pointer;
+}

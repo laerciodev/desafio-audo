@@ -1,0 +1,33 @@
+<main class="main">
+
+  <header class="exam-list-header">
+    <img class="exam-list-logo" src="assets/logo.png">
+    <span class="patient-name"> Pedro Francisco João Xavier Alcântara Antônio</span>
+    <a href="/" class="logout">Sair</a>
+  </header>
+
+  <section
+    matSort
+    (matSortChange)="sortData($event)"
+    class="section-my-exams">
+
+    <h2 class="exam-list-title">Meus exames</h2>
+
+    <header class="exams-header">
+      <span mat-sort-header="examName">data</span>
+      <span mat-sort-header="examDate">exame</span>
+      <span mat-sort-header="nameDoctor">médico</span>
+    </header>
+
+    <div
+      class="exams-container"
+      *ngFor="let exam of sortedData">
+      <card-exam
+        [name]="exam.examName"
+        [date]="exam.examDate"
+        [doctor]="exam.nameDoctor">
+      </card-exam>
+    </div>
+
+  </section>
+

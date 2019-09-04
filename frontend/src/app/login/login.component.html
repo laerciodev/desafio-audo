@@ -1,0 +1,52 @@
+<main class="main-login">
+  <img class="logo" src="/assets/logo.png" />
+  <form
+    [formGroup]="loginForm"
+    class="form-signin"
+    (submit)="login()"
+    >
+
+    <input
+      formControlName="numeroExame"
+      type="text"
+      id="numeroExame"
+      class="form-control"
+      placeholder="Digite o código do exame"
+      required=""
+      autofocus="">
+
+    <input
+      formControlName="senha"
+      type="password"
+      id="inputPassword"
+      class="form-control"
+      placeholder="Digite a senha de acesso"
+      required="">
+
+    <message-erro-login
+      *ngIf="loginForm.get('numeroExame').errors?.required"
+      text="O número do exame é obrigatório.">
+    </message-erro-login>
+
+    <message-erro-login
+      *ngIf="loginForm.get('senha').errors?.required"
+      text="A senha é obrigatória.">
+    </message-erro-login>
+
+    <button [disabled]="loginForm.invalid" class="btn-audo" type="submit">Entrar</button>
+
+    <div class="text-login">
+      <p>
+        <span href="#" class="decoration">Não consigo acessar meus exames.</span>
+      </p>
+      <p>
+        Ao clicar em entrar, você está concordando com os nossos
+        <span class="decoration">Termos de Serviço</span> e nteger possuere erat a
+        ante venetatis dapibus possuere velit aliquet
+      </p>
+    </div>
+  </form>
+
+
+</main>
+

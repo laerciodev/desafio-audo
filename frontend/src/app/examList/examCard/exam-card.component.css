@@ -1,0 +1,80 @@
+.card {
+  text-transform: capitalize;
+  color: #49494a;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 8px 0px #dbdddf;
+}
+
+.card.active {
+  box-shadow: 4px 4px 8px 0px #c3c4c6;
+}
+
+.card-header {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+  transition: 100ms ease-in;
+}
+
+.card-header.active {
+  transition: 100ms ease-out;
+  background-color: #579AF2;
+  color: #fff;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.arrow {
+  cursor: pointer;
+  transition: 200ms ease-in;
+}
+
+.arrow-up {
+  transition: 200ms ease-out;
+  transform: rotate(180deg);
+  width: 30px;
+  fill: #fff
+}
+
+.-laudo {
+  display: inline-block;
+  width: 120px;
+  padding: 10px 20px;
+  font-size: 12px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  background-color: #f4f6f8!important;
+  color: #579AF2!important;
+}
+
+.-imagens {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  background-color: #f4f6f8!important;
+  color: #579AF2!important;
+}
+
+.btn-audo:hover {
+  background-color: #579AF2!important;
+  color: #f4f6f8!important;
+}
+
+.exam-info-container {
+  display: flex;
+  margin-bottom: 10px;
+  /* justify-content: space-between; */
+}
+
+.exam-date,
+.doctor-name {
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+}
+
